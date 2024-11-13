@@ -1,0 +1,44 @@
+$mainBgColor: rgb(5, 56, 115);
+.sing {
+  background-color: $mainBgColor;
+  height: 100vh;
+  display: flex;
+  &__form {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    &--input {
+      font-family: sans-serif;
+      font-size: 20px;
+      padding-left: 10px;
+      display: block;
+      margin: auto;
+      width: 90%;
+      height: 50px;
+      border-radius: 10px;
+    }
+    &--btn {
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px 1px black;
+      font-size: 30px;
+      background-color: white;
+      border: none;
+      color: $mainBgColor;
+      width: 90%;
+      height: 50px;
+      transition: 0.2s;
+      &:hover {
+        box-shadow: 0 0 10px 1px black inset;
+        background-color: $mainBgColor;
+        color: white;
+      }
+    }
+  }
+  &__img {
+    background-image: url("https://thumbs.dreamstime.com/b/developer-working-laptop-desk-vector-illustration-specialist-freelancer-professional-employee-developer-workplace-127709261.jpg");
+    height: 100%;
+    width: 100%;
+  }
+}

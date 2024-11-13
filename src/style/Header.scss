@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: rgb(5, 56, 115);
+  height: 5vh;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+.auth_nav {
+  margin: 0;
+
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
+
+  &-login {
+    text-decoration: none;
+    background-color: #4f9cf9;
+    width: 40%;
+    border-radius: 10px;
+    text-align: center;
+    padding: 0.5rem;
+    color: white;
+    font-family: sans-serif;
+    transition: 0.2s;
+    font-weight: 700;
+    &:hover {
+      background-color: white;
+      color: #4f9cf9;
+    }
+  }
+  &-reg {
+    @extend .auth_nav-login;
+  }
+}

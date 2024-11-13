@@ -1,0 +1,33 @@
+.login {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  &__img {
+    background-image: url("https://cdn2.vectorstock.com/i/1000x1000/07/06/workplace-working-at-computer-flat-3d-isometric-vector-4190706.jpg");
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    &--title {
+      text-align: center;
+      font-size: 20px;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    }
+    &--input {
+      height: 100%;
+      width: 90%;
+      background-color: #eeeeee;
+      font-size: 20px;
+      border-radius: 5px;
+      border: 1px solid black;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    }
+  }
+  .container {
+    width: 90%;
+    height: 50px;
+  }
+}

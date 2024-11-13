@@ -1,0 +1,199 @@
+$mainBgColor: rgb(5, 56, 115);
+
+@mixin cardProperty($bg-color, $font-color) {
+  background-color: $bg-color;
+  color: $font-color;
+  border: 1px solid black;
+  border-bottom: 6px solid black;
+  width: 90%;
+  height: 80%;
+  margin: auto;
+  border-radius: 45px;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 30px;
+}
+
+@mixin cardTitleProperty($bg-color, $font-color) {
+  background-color: $bg-color;
+  color: $font-color;
+  font-size: 30px;
+  height: 70px;
+  width: 200px;
+  text-align: center;
+  font-family: sans-serif;
+  border-radius: 10px;
+}
+
+.intro {
+  background-color: $mainBgColor;
+  height: 90vh;
+  &__container {
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    height: 90%;
+    width: 90%;
+    margin: auto;
+  }
+  &__text {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &--title {
+      color: white;
+      font-family: sans-serif;
+      font-size: 64px;
+    }
+    &--subtitle {
+      color: white;
+      font-family: sans-serif;
+      font-size: 18px;
+    }
+    &--login {
+      display: block;
+      text-decoration: none;
+      background-color: #4f9cf9;
+      width: 150px;
+      height: 30px;
+      font-size: 20px;
+      border-radius: 10px;
+      text-align: center;
+      padding: 1rem;
+      color: white;
+      font-family: sans-serif;
+      transition: 0.2s;
+
+      &:hover {
+        background-color: white;
+        color: #4f9cf9;
+      }
+    }
+  }
+  &__img {
+    width: 45%;
+    background-image: url("https://avatars.mds.yandex.net/i?id=bb2515745ced4616fec9160cd77493a2_l-9197564-images-thumbs&n=13");
+    background-size: cover;
+  }
+}
+
+.service {
+  height: 100vh;
+  padding-top: 5rem;
+  &__header {
+    display: flex;
+    gap: 20px;
+    width: 90vw;
+    height: 70px;
+    margin: auto;
+    &--logo {
+      text-align: center;
+      padding-top: 20px;
+      width: 15vw;
+      height: 50px;
+      border-radius: 10px;
+      color: white;
+      font-size: 30px;
+      font-family: sans-serif;
+      background-color: $mainBgColor;
+    }
+    &--text {
+      width: 650px;
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      font-weight: 400;
+    }
+  }
+  &__cards {
+    width: 90vw;
+    height: 80vh;
+    margin: auto;
+    margin-top: 20px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .card1 {
+    @include cardProperty(#f3f3f3, white);
+    &__title {
+      @include cardTitleProperty(#4f9cf9, white);
+    }
+  }
+  .card2 {
+    @include cardProperty(#4f9cf9, white);
+    &__title {
+      @include cardTitleProperty(white, black);
+    }
+  }
+  .card3 {
+    @include cardProperty($mainBgColor, white);
+    &__title {
+      @include cardTitleProperty(white, black);
+    }
+  }
+  .card4 {
+    @include cardProperty(#f3f3f3, white);
+    &__title {
+      @include cardTitleProperty(#4f9cf9, white);
+    }
+  }
+}
+
+.contact {
+  height: 100vh;
+  padding-top: 5rem;
+  &__header {
+    display: flex;
+    gap: 20px;
+    width: 90vw;
+    height: 70px;
+    margin: auto;
+    &--logo {
+      text-align: center;
+      padding-top: 20px;
+      width: 15vw;
+      height: 50px;
+      border-radius: 10px;
+      color: white;
+      font-size: 30px;
+      font-family: sans-serif;
+      background-color: $mainBgColor;
+    }
+    &--text {
+      width: 650px;
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      font-weight: 400;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    justify-content: space-evenly;
+    gap: 20px;
+    &--input {
+      border: 1px solid black;
+      width: 50%;
+      height: 50px;
+      border-radius: 10px;
+      font-family: sans-serif;
+      color: grey;
+      padding-left: 20px;
+    }
+    &--textarea {
+      border: 1px solid black;
+      width: 50%;
+      height: 200px;
+      border-radius: 10px;
+      font-family: sans-serif;
+      color: grey;
+      padding-left: 20px;
+      padding-top: 30px;
+    }
+  }
+}
