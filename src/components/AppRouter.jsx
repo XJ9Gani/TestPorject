@@ -6,7 +6,7 @@ export default function AppRouter() {
     { path: "/singUp", element: <SingUp /> },
     { path: "/logIn", element: <LogIn /> },
     { path: "/dashboard", element: <StudentDashboard /> },
-    { path: "/detail", element: <Details /> },
+    { path: "/courseDetial", element: <Details /> },
   ]);
 
   return routes;

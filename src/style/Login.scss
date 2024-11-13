@@ -25,7 +25,15 @@
       border: 1px solid black;
       font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     }
+    &--btn {
+      border-radius: 10px;
+      width: 80%;
+      height: 50px;
+      background-color: rgb(5, 56, 115);
+      color: white;
+    }
   }
+
   .container {
     width: 90%;
     height: 50px;

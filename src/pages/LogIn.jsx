@@ -24,10 +24,8 @@ export default function LogIn() {
             <span className="login__form--icon"></span>
           </div>
 
-          <button>Log In</button>
-
-          <hr />
-          <button>Sing Up</button>
+          <button className="login__form--btn">Log In</button>
+          <button className="login__form--btn">Sing Up</button>
         </form>
       </section>
     </>

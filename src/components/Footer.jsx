@@ -3,7 +3,11 @@ export default function Footer() {
     <>
       <footer
         className="footer"
-        style={{ height: "50vh", backgroundColor: "rgb(5, 56, 115)" }}
+        style={{
+          height: "50vh",
+          backgroundColor: "rgb(5, 56, 115)",
+          boxShadow: "0 0 5px 1px black",
+        }}
       ></footer>
     </>
   );

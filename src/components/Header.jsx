@@ -8,6 +8,12 @@ export default function Header() {
         <NavLink className="logo" to="/">
           {Icon.logo}
         </NavLink>
+        <nav className="pages_nav">
+          <NavLink to={"/dashboard"} className="auth_nav-login">
+            Student Dashboard
+          </NavLink>
+        </nav>
+
         <nav className="auth_nav">
           <NavLink to={"/logIn"} className="auth_nav-login">
             LOGIN
