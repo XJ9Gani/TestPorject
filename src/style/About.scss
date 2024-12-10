@@ -1,0 +1,126 @@
+$mainBgColor: rgb(5, 56, 115);
+.about {
+  min-height: 100vh;
+  &__intro {
+    display: flex;
+    justify-content: space-around;
+    background-color: $mainBgColor;
+    height: 100vh;
+    .title {
+      font-size: 6rem;
+      color: white;
+      font-family: sans-serif;
+      text-align: center;
+    }
+    .text {
+      width: 500px;
+      font-size: 1.9rem;
+      color: white;
+      font-family: sans-serif;
+      text-align: center;
+    }
+  }
+}
+.list {
+  min-height: 180vh;
+
+  &__info {
+    display: flex;
+    justify-content: space-around;
+    &--title {
+      font-family: sans-serif;
+      background-color: $mainBgColor;
+      border-radius: 10px;
+      font-size: 1.5rem;
+      padding: 1.3rem;
+      width: 250px;
+      color: white;
+    }
+    &--text {
+      font-family: sans-serif;
+      width: 60%;
+      font-size: 1.3rem;
+      padding: 1rem;
+    }
+  }
+  &__op {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    &--item {
+      background-color: #f3f3f3;
+      border: 1px solid black;
+      border-bottom: 10px solid black;
+      border-radius: 30px;
+      height: 20vh;
+      width: 80vw;
+      .visible {
+        &--number {
+          font-size: 3rem;
+          font-family: sans-serif;
+        }
+        &--title {
+          font-size: 2rem;
+          font-family: sans-serif;
+        }
+        &--checkbox {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          .visible--checkbox:checked ~ .hidden {
+            display: block;
+          }
+        }
+        .hidden {
+          display: none;
+          height: 20vh;
+          background-color: red;
+        }
+      }
+    }
+  }
+}
+
+.list__op--item {
+  background-color: #f3f3f3;
+  border: 1px solid black;
+  border-bottom: 10px solid black;
+  border-radius: 30px;
+  height: 10vh;
+  width: 80vw;
+  padding: 3rem;
+  transition: height 0.3s ease; // Плавное изменение высоты
+
+  .visible--checkbox:checked + .hidden {
+    display: block;
+  }
+
+  // Увеличиваем размер родителя, когда скрытый блок отображается
+  .visible--checkbox:checked ~ .visible {
+    margin-bottom: 20px; // Для увеличения пространства между блоками
+  }
+}
+
+.hidden {
+  display: none;
+  margin-top: 10px;
+  background-color: lightblue;
+  padding: 10px;
+}
+
+.visible {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.visible--number,
+.visible--title {
+  margin: 0;
+}
+
+.visible--checkbox {
+  margin-left: 10px;
+}

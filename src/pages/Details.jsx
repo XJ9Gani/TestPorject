@@ -1,4 +1,5 @@
 import "../style/CourseDetail.scss";
+import CalculateGrades from "./CalculateGrades";
 export default function Details() {
   return (
     <>
@@ -15,6 +16,8 @@ export default function Details() {
           <div className="detail__info--item">Current grade of Course</div>
           <div className="detail__info--item">Course total grade</div>
         </section>
+
+        <CalculateGrades />
       </section>
     </>
   );

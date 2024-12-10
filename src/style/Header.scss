@@ -14,7 +14,6 @@ body {
 }
 .auth_nav {
   margin: 0;
-
   width: 20%;
   display: flex;
   justify-content: space-around;
@@ -22,13 +21,15 @@ body {
   &-login {
     text-decoration: none;
     background-color: #4f9cf9;
-    width: 40%;
+    width: 150px;
+    margin-left: 5px;
     border-radius: 10px;
     text-align: center;
     padding: 0.5rem;
     color: white;
     font-family: sans-serif;
     transition: 0.2s;
+    font-size: 0.9rem;
     font-weight: 700;
     &:hover {
       background-color: white;
@@ -40,7 +41,11 @@ body {
   }
 }
 .pages_nav {
-  width: 500px;
+  width: 1000px;
   display: flex;
   justify-content: space-around;
+}
+
+.yellow {
+  background-color: #ffe492 !important;
 }

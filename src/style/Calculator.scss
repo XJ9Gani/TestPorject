@@ -1,0 +1,90 @@
+$primary-color: rgb(5, 56, 115);
+
+.calc {
+  display: flex;
+  font-family: "Arial", sans-serif;
+  border-radius: 8px;
+  background-color: #f4f4f9; // Легкий фоновый цвет для калькулятора
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Легкая тень
+  padding: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 350px;
+  margin: 0 auto;
+  background-color: #fff; // Белый фон формы
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); // Легкая тень для формы
+}
+
+form div {
+  margin-bottom: 15px; // Увеличено расстояние между полями
+}
+
+label {
+  font-weight: 600;
+  color: #333; // Темный текст для контраста
+  font-size: 16px;
+}
+
+input,
+select {
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 6px;
+  border: 1px solid #ddd; // Светлый контур
+  background-color: #f9f9f9; // Светлый фон для полей
+  transition: border 0.3s ease, box-shadow 0.3s ease; // Плавный переход для фокуса
+}
+
+input:focus,
+select:focus {
+  border-color: $primary-color;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); // Плавный фокусный эффект с тем же цветом
+}
+
+button {
+  padding: 12px;
+  background-color: $primary-color;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease; // Плавное изменение фона при наведении
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Легкая тень для кнопки
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.5); // Немного темнее при наведении
+}
+
+h2 {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 22px;
+  color: #333;
+}
+
+p {
+  font-size: 16px;
+  text-align: center;
+  color: #666;
+}
+
+.calculate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.result {
+  height: 50vh;
+  margin-bottom: 100px;
+}

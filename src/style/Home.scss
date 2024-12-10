@@ -72,9 +72,12 @@ $mainBgColor: rgb(5, 56, 115);
     }
   }
   &__img {
+    margin-top: 100px;
     width: 45%;
-    background-image: url("https://avatars.mds.yandex.net/i?id=bb2515745ced4616fec9160cd77493a2_l-9197564-images-thumbs&n=13");
+    height: 60%;
+    background-image: url("../assets/pick1..png");
     background-size: cover;
+    border-radius: 30px;
   }
 }
 

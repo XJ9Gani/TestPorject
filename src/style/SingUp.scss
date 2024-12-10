@@ -3,19 +3,25 @@ $mainBgColor: rgb(5, 56, 115);
   background-color: $mainBgColor;
   height: 100vh;
   display: flex;
+
   &__form {
+    background-color: $mainBgColor;
     height: 100%;
-    width: 100%;
+    margin: 0;
+    margin-left: 200px;
+    margin-right: 400px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 30px;
+    grid-template-columns: 2fr 2fr;
     &--input {
       font-family: sans-serif;
       font-size: 20px;
-      padding-left: 10px;
+
       display: block;
-      margin: auto;
-      width: 90%;
-      height: 50px;
+      margin-left: 0px;
+      width: 200px;
+      height: 30px;
       border-radius: 10px;
     }
     &--btn {
@@ -26,7 +32,7 @@ $mainBgColor: rgb(5, 56, 115);
       background-color: white;
       border: none;
       color: $mainBgColor;
-      width: 90%;
+      width: 200px;
       height: 50px;
       transition: 0.2s;
       &:hover {
@@ -37,8 +43,8 @@ $mainBgColor: rgb(5, 56, 115);
     }
   }
   &__img {
-    background-image: url("https://thumbs.dreamstime.com/b/developer-working-laptop-desk-vector-illustration-specialist-freelancer-professional-employee-developer-workplace-127709261.jpg");
+    background-image: url("../assets/pick2.png");
     height: 100%;
-    width: 100%;
+    width: 50%;
   }
 }

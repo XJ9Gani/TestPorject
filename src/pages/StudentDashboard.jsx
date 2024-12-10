@@ -1,8 +1,19 @@
 import "../style/Dashboard.scss";
 import { Icon } from "../Icon";
-import { NavLink } from "react-router-dom";
+import { NavLink, useSearchParams } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 export default function StudentDashboard() {
+  const [user, setUser] = useState();
+
+  useEffect(() => {
+    const userData = localStorage.getItem("userData");
+    if (userData) {
+      const parsedData = JSON.parse(userData);
+      setUser(parsedData.name);
+    }
+  }, []);
+  console.log(user);
   const students = [
     {
       id: 1,
@@ -42,8 +53,6 @@ export default function StudentDashboard() {
     },
   ];
 
-  console.log(students);
-
   return (
     <>
       <section className="dashboard">
@@ -56,7 +65,7 @@ export default function StudentDashboard() {
           </h3>
         </div>
         <h1 className="dashboard__title">
-          Hello, [Name]! Here is your current academic progress:
+          Hello, {user}! Here is your current academic progress:
         </h1>
 
         <ul className="dashboard__cards">
@@ -71,7 +80,13 @@ export default function StudentDashboard() {
               </div>
               <div className="downSide">
                 <h1>Current Grade :{el.currentGrade}</h1>
-                <NavLink to="/courseDetial" className="downSide__btn">
+                <NavLink
+                  to="/courseDetial"
+                  className="downSide__btn"
+                  onClick={() =>
+                    localStorage.setItem("currentCourse", el.course)
+                  }
+                >
                   See Details
                 </NavLink>
               </div>

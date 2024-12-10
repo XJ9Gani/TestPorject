@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Math 101",
+    "max_points": 100
+  },
+  {
+    "name": "Physics 101",
+    "max_points": 100
+  }
+]
