@@ -36,11 +36,11 @@ $mainBgColor: rgb(5, 56, 115);
     &--item {
       width: 20%;
       text-align: center;
-      padding: 1.2rem;
+      padding: 0.5rem;
       color: white;
       font-family: sans-serif;
       font-size: 20px;
-      background-color: gray;
+      background-color: $mainBgColor;
     }
   }
 }

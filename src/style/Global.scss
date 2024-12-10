@@ -1,3 +1,11 @@
-* {
-  overflow-x: hidden;
+.globalName {
+  position: absolute;
+  top: 130px;
+  left: 93%;
+  padding: 1rem;
+  font-size: 1rem;
+  z-index: 0;
+  color: WHITE;
+  background-color: #043873;
+  border-radius: 10px;
 }
